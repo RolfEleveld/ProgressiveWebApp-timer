@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        Timer
+    </title>
+    <script src="timer.js"></script>
+    <link rel="stylesheet" type="text/css" href="timer.css">
+</head>
+
+<body>
+    <nav class="settings hidden">
+        <form method="post" action="javascript:setTimer()" id="timerForm">
+            <label for="days">Days</label>
+            <input type="number" value="0" min="0" max="14610" step="1" name="days" onchange="stopTimer()">
+            <label for="hours">Hours</label>
+            <input type="number" value="0" min="0" max="23" step="1" name="hours" onchange="stopTimer()">
+            <label for="minutes">Minutes</label>
+            <input type="number" value="10" min="0" max="59" step="1" name="minutes" onchange="stopTimer()">
+            <label for="seconds">Seconds</label>
+            <input type="number" value="0" min="0" max="59" step="1" name="seconds" onchange="stopTimer()">
+            <button type="submit" value="Start">Start</button>
+        </form>
+    </nav>
+    <header></header>
+    <article class="clock" onclick="javascript:showMenu()">
+        <section class="expiration">
+            <h2>Expired</h2>
+        </section>
+        <section class="days hidden">
+            <h2>0</h2>
+        </section>
+        <section class="hours hidden">
+            <h2>0</h2>
+        </section>
+        <section class="hourseparator hidden">
+            <h2 class="separator">:</h2>
+        </section>
+        <section class="minutes hidden">
+            <h2>10</h2>
+        </section>
+        <section class="minuteseparator hidden">
+            <h2 class="separator">:</h2>
+        </section>
+        <section class="seconds hidden">
+            <h2>0</h2>
+        </section>
+    </article>
+</body>
+
+</html>
