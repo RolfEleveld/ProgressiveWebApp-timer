@@ -96,7 +96,8 @@ function setTimer() {
     var m = settingsForm["minutes"].value;
     var s = settingsForm["seconds"].value;
     var offsetTime = d * 24 * 60 * 60 * 1000 + h * 60 * 60 * 1000 + m * 60 * 1000 + s * 1000;
-    var destinationTime = (new Date()).getTime() + offsetTime;
+    var now = Date.now();
+    var destinationTime = now + offsetTime;
     localStorage.timer = destinationTime;
     timer(new Date(destinationTime).getTime()); //10 minutes
     hideEnded();
