@@ -1,0 +1,23 @@
+{
+    "name": "Countdown Timer",
+    "short_name": "Countdown Timer",
+    "lang": "en",
+    "start_url": "/",
+    "display": "fullscreen",
+    "theme_color": "#000",
+    "background_color": "#000",
+    "icons": [
+        {
+            "src": "icons/icon64.png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "icons/icon128.png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "icons/icon512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

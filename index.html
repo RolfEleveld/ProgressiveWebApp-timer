@@ -1,12 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-    <title>
-        Timer
-    </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json">
     <script src="timer.js"></script>
     <link rel="stylesheet" type="text/css" href="timer.css">
+    <meta name="description" content="Timer">
+    <link rel="shortcut icon" type="image/png" href="/icons/icon128.png" />
+    <link rel="icon" type="image/png" href="/icons/icon512.png" sizes="512x512">
+    <link rel="icon" type="image/png" href="/icons/icon128.png" sizes="128x128">
+    <link rel="icon" type="image/png" href="/icons/icon64.png" sizes="64x64">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="msapplication-TileImage" content="/icons/icon512.png">
+    <meta name="theme-color" content="#000">
 </head>
 
 <body>
@@ -25,7 +36,7 @@
     </nav>
     <header></header>
     <article class="clock" onclick="javascript:showMenu()">
-        <section class="expiration">
+        <section class="expiration hidden">
             <h2>Expired</h2>
         </section>
         <section class="days hidden">

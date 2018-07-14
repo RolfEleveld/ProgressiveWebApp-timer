@@ -10,7 +10,7 @@ function timer(goalTime) {
             }
         }, 1000);
     } else {
-        stopTrigger = true;;
+        stopTrigger = true;
         showEnded();
     }
 }
@@ -96,7 +96,9 @@ function setTimer() {
     var m = settingsForm["minutes"].value;
     var s = settingsForm["seconds"].value;
     var offsetTime = d * 24 * 60 * 60 * 1000 + h * 60 * 60 * 1000 + m * 60 * 1000 + s * 1000;
-    timer(new Date(Date.now() + offsetTime).getTime()); //10 minutes
+    var destinationTime = (new Date()).getTime() + offsetTime;
+    localStorage.timer = destinationTime;
+    timer(new Date(destinationTime).getTime()); //10 minutes
     hideEnded();
     hideField("nav");
 }
@@ -106,3 +108,22 @@ function showMenu() {
 function stopTimer() {
     stopTrigger = true;
 }
+function loadTimer(){
+    hideEnded();
+    var endTime = localStorage.timer;
+    if (!stopTrigger){
+        timer(endTime);     
+    }
+}
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+}
+loadTimer();
