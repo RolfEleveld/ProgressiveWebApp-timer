@@ -2,7 +2,7 @@
     "name": "Countdown Timer",
     "short_name": "Countdown Timer",
     "lang": "en",
-    "start_url": "/index.html?start=a2hs",
+    "start_url": "/?utm_source=a2hs",
     "display": "fullscreen",
     "orientation":"landscape",
     "theme_color": "#000",
