@@ -1,6 +1,6 @@
 {
     "name": "Countdown Timer",
-    "short_name": "Countdown Timer",
+    "short_name": "Timer",
     "lang": "en",
     "start_url": "/?utm_source=a2hs",
     "display": "fullscreen",
