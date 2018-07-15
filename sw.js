@@ -1,12 +1,14 @@
 var cacheName = 'timer-offline';
 var filesToCache = [
-    '/',
     '/index.html',
     '/timer.js',
     '/sw.js',
     '/timer.css',
     '/icons/icon64.png',
     '/icons/icon128.png',
+    '/icons/icon144.png',
+    '/icons/icon152.png',
+    '/icons/icon192.png',
     '/icons/icon512.png',
   ];
 

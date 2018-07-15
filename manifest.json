@@ -2,8 +2,9 @@
     "name": "Countdown Timer",
     "short_name": "Countdown Timer",
     "lang": "en",
-    "start_url": "/index.html?start=0:10:0",
+    "start_url": "/index.html?start=a2hs",
     "display": "fullscreen",
+    "orientation":"landscape",
     "theme_color": "#000",
     "background_color": "#000",
     "icons": [

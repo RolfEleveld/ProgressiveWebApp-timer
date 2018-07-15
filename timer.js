@@ -1,3 +1,4 @@
+var installPromptEvent;
 var stopTrigger = false;
 function timer(goalTime) {
     var now = Date.now();
@@ -128,6 +129,14 @@ if ('serviceWorker' in navigator) {
             // registration failed :(
             console.log('ServiceWorker registration failed: ', err);
         });
+    });
+    window.addEventListener('beforeinstallprompt', function (event) {
+        // Prevent Chrome <= 67 from automatically showing the prompt
+        event.preventDefault();
+        // Stash the event so it can be triggered later.
+        installPromptEvent = event;
+        // Update the install UI to notify the user app can be installed
+        document.querySelector('#install-button').disabled = false;
     });
 }
 loadTimer();
